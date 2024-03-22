@@ -9,12 +9,6 @@ const output = document.getElementById('output');
 let isError = false;
 
 function cleanInputString(str) {
-  const strArray = str.split('');
-  const cleanStrArray = [];
-  for (let i = 0; i < strArray.length; i++) {
-    if (!['+', '-', ' '].includes(strArray[i])) {
-      cleanStrArray.push(strArray[i]);
-    }
-    return strArray;
-  }
+  const regex = /[^+\- ]/g; // Matches any character that is not '+', '-', or ' '
+  return str.replace(regex, '');
 }
