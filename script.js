@@ -9,6 +9,11 @@ const output = document.getElementById('output');
 let isError = false;
 
 function cleanInputString(str) {
-  const regex = /[^+\- ]/g; // Matches any character that is not '+', '-', or ' '
+  const regex = /[^+\- ]/g;
   return str.replace(regex, '');
+}
+function isInvalidInput(str) {
+  const regex = /\d+e\d+/i;
+  const result = str.match(regex);
+  return result;
 }
