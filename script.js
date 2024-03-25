@@ -1,5 +1,4 @@
 const calorieCounter = document.getElementById('calorie-counter');
-console.log(calorieCounter);
 const budgetNumberInput = document.getElementById('budget');
 const entryDropdown = document.getElementById('entry-dropdown');
 const addEntryButton = document.getElementById('add-entry');
@@ -16,5 +15,6 @@ function isInvalidInput(str) {
   return str.match(regex);
 }
 function addEntry() {
-  var targetId = '#' + entryDropdown.value;
+  const targetId = '#' + entryDropdown.value + ' .input-container';
+  const targetInputContainer = document.querySelector(targetId);
 }
